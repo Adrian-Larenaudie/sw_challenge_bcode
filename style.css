@@ -2,6 +2,9 @@ body{
     background-color: #060447;
     color: #FFF38A;
     margin: 0;
+    display: flex;
+    flex-direction: column;   
+    overflow: hidden
 }
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 * {
@@ -12,45 +15,80 @@ body{
     width: 80px;
 }
 .tittle{
-    font-weight: 700;
-    font-size: 40px;
+    font-weight: 900;
+    font-size: 35px;
+    margin: 20px 0 20px 50px;
 }
 .paragraph{
-    font-size: 20px;
+    font-size: 18px;
     line-height: 30px;
     width: 422px;
     height: 90px;
 }
-.release-year{
-    width: 490px;
-    height: 169px;
+.main-text *{
+    margin-left: 100px;
+}
+/* Style des 3 bloques principaux */
+.main-text{
+    margin: 50px;
 }
 .attach{
     z-index: 0;
     position: absolute;
     width: 530px;
     height: 822.59px;
-    left: 781px;
-    top: 119px;
+    left: 830px;
+    top: 50px;
 }
 .movie-switcher{
     z-index: 1;
     display: flex;
+    margin: 10px 150px 0 150px;
+    justify-content: flex-start;
 }
-.arrow{}
+/* ------------------------------ */
+.attach img {
+    margin: 25px 50px 180px 50px;
+    width: /* 422 */ 352px;
+    height: /* 604 */ 504px;
+}
+.release-year{
+    width: 400px;
+    height: 130px;
+    margin-top: 130px;
+}
+#arrow{
+    cursor: pointer;
+    width: 35;
+    height: 22px;
+    align-self: center;
+    color: #827B68;
+}
+.right:hover {
+    transform: scale(1.1);
+    transition: 0.2s;
+}
+.left:hover {
+    transform: scale(1.1) rotate(180deg);
+    transition: 0.2s;
+}
+.right{
+    margin-right: 230px;
+}
 .left{
     transform: rotate(180deg);
+    margin-right: 50px;
 }
 .chip{
     height: 32px;
     width: 32px;
     border-radius: 50%;
-    background-color: #FFF38A;
+    background-color: #827B68;
 }
 .linking-line{
     height: 2px;
     width: 150px;
-    background-color: #FFF38A;
+    background-color:#827B68;
     position: relative;
     top: 15px;
 }
