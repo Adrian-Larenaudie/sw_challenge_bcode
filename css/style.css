@@ -86,20 +86,36 @@ body{
     transform: rotate(180deg);
     margin-right: 50px;
 }
-.chip{
-    height: 32px;
-    width: 32px;
+.sphere{
+    height: 35px;
+    width: 35px;
     border-radius: 50%;
     background-color: #827B68;
 }
-.linking-line{
-    height: 2px;
+.link-lines{
+    height: 2.5px;
     width: 150px;
     background-color:#827B68;
     position: relative;
     top: 15px;
 }
+.charging-bar{
+    width: 0;
+    height: inherit;
+    transition: 0.4s;
+    background-color: #FFF38A;
+}
+.charged-bar{
+    width: 100%;
+}
 .posters{
     position: relative;
     display: flex;
+}
+.bright-sphere{
+    background-color: #FFF38A;
+    height: 31px;
+    width: 31px;
+    border-radius: 50%;
+    border: solid 2px #827B68;
 }

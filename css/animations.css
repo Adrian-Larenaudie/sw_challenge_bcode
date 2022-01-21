@@ -1,4 +1,6 @@
 /* Animation */
+
+/* Partie texte titre logo et année de sortie */
 @keyframes slideright{
     0% {
         left: 0;
