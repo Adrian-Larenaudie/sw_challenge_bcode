@@ -1,13 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+* {
+    font-family: 'Montserrat', sans-serif;
+}
 body{
     background-color: #060447;
     color: #FFF38A;
     margin: 0;
     display: flex;
     flex-direction: column;   
-}
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-* {
-    font-family: 'Montserrat', sans-serif;
 }
 .logo{
     height: 80px;
@@ -35,7 +35,7 @@ body{
     position: absolute;
     width: 530px;
     height: 822.59px;
-    left: 830px;
+    left: 880px;
     top: 50px;
     display: flex;
 }
@@ -45,10 +45,14 @@ body{
     justify-content: flex-start;
 }
 /* ------------------------------ */
+.attach{
+    overflow: hidden;
+    width: 350px;
+    height: 504px;
+}
 .attach img {
-    margin: 25px 50px 180px 50px;
-    width: /* 422 */ 352px;
-    height: /* 604 */ 504px;
+    width: 352px;
+    height: 504px;
     position: relative;
 }
 .release-year{
@@ -95,27 +99,7 @@ body{
     position: relative;
     top: 15px;
 }
-/* Animation */
-@keyframes slide {
-    0% {
-        left: 0;
-    }
-    25% {
-        left: -20px;
-        opacity: 0;
-    }
-    50% {
-        left: 20px;
-        opacity: 0;
-    }
-    100% {
-        left: 0;
-        opacity: 1;
-    }
-}
-.slide {
+.posters{
     position: relative;
-    animation-name: slide;
-    animation-duration: 0.4s;
-    animation-iteration-count: 1;
+    display: flex;
 }

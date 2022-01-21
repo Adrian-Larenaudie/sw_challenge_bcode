@@ -1,0 +1,87 @@
+/* Animation */
+@keyframes slideright{
+    0% {
+        left: 0;
+    }
+    25% {
+        left: -20px;
+        opacity: 0;
+    }
+    50% {
+        left: 20px;
+        opacity: 0;
+    }
+    100% {
+        left: 0;
+        opacity: 1;
+    }
+}
+.slideright{
+    position: relative;
+    animation-name: slideright;
+    animation-duration: 0.4s;
+    animation-iteration-count: 1;
+}
+@keyframes slideleft {
+    0% {
+        left: 0;
+    }
+    25% {
+        left: 20px;
+        opacity: 0;
+    }
+    50% {
+        left: -20px;
+        opacity: 0;
+    }
+    100% {
+        left: 0;
+        opacity: 1;
+    }
+}
+.slideleft{
+    position: relative;
+    animation-name: slideleft;
+    animation-duration: 0.4s;
+    animation-iteration-count: 1;
+}
+/* Animation de l'affiche du film: */
+
+/* -Se décale vers la gauche quand on clique sur la flèche droite */
+@keyframes attachSlide1{
+    from {left: 0;}
+    to {left: -352px;}
+}
+@keyframes attachSlide2{
+    from {left: -352px;}
+    to {left: -704px;}
+}
+.slideAttach1{
+    animation-name: attachSlide1;
+    animation-duration: 0.4s;
+    animation-iteration-count: 1;
+}
+.slideAttach2{
+    animation-name: attachSlide2;
+    animation-duration: 0.4s;
+    animation-iteration-count: 1;
+}
+/* -Se décale vers la gauche quand on clique sur la flèche droite  */
+@keyframes attachSlide3{
+    from {left: -352px;}
+    to {left: 0;}
+}
+@keyframes attachSlide4{
+    from {left: -704px;}
+    to {left: -352px;}
+}
+.slideAttach3{
+    animation-name: attachSlide3;
+    animation-duration: 0.4s;
+    animation-iteration-count: 1;
+}
+.slideAttach4{
+    animation-name: attachSlide4;
+    animation-duration: 0.4s;
+    animation-iteration-count: 1;
+}
