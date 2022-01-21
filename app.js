@@ -48,21 +48,21 @@ function switcher(target, index){
         }
         if(index === 2){
             attach.classList.add("slideAttach2")
-            ten.classList.add("slideright")
         }
     } else if(target == leftArrow){
         array.forEach(element => element.classList.add("slideleft"))
         if(index === 0){attach.classList.add("slideAttach3")}
         if(index === 1){attach.classList.add("slideAttach4")}
-        if(ten.src.includes("8")){ten.classList.add("slideleft")}
+       /*  if(ten.src.includes("Star-Wars-img/7.png")){ten.classList.add("slideleft")} */
+       if(index != 1){ten.classList.add("slideleft")}
     }
     setTimeout(()=>{
         logo.src = data.logo[index]
         tittle.textContent = data.tittle[index]
         text.textContent = data.text[index]
         oneness.src = data.oneness[index]
-        if(target == rightArrow && index == 1){ten.src = data.ten[1]}
-        if(target == leftArrow && index < 2){ten.src = data.ten[0]}
+        if(target == rightArrow && (index == 2 || index == 1)){ten.src = data.ten[1]}
+        if(target == leftArrow && index == 0){ten.src = data.ten[0]}
     }, 100)
     setTimeout(()=>{
         if(index === 0){pxValue = 0}
