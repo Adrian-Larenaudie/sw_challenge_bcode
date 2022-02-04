@@ -2,6 +2,11 @@
 * {
     font-family: 'Montserrat', sans-serif;
 }
+
+html {
+    font-size: 10%;
+}
+
 body{
     background-color: #060447;
     color: #FFF38A;
@@ -9,16 +14,16 @@ body{
     display: flex;
     flex-direction: column;   
 }
-.logo{
+.main-text__logo{
     height: 80px;
     width: 80px;
 }
-.tittle{
+.main-text__tittle{
     font-weight: 900;
     font-size: 35px;
     margin: 20px 0 20px 50px;
 }
-.paragraph{
+.main-text__paragraph{
     font-size: 18px;
     line-height: 30px;
     width: 422px;
@@ -61,7 +66,7 @@ body{
     height: 130px;
     margin-top: 130px;
 }
-.number{
+.release-year__number{
     margin: 0 10px;
 }
 .arrow{
@@ -69,7 +74,6 @@ body{
     width: 35;
     height: 22px;
     align-self: center;
-    color: #827B68;
 }
 .right:hover {
     transform: scale(1.1);
@@ -108,7 +112,7 @@ body{
 .charged-bar{
     width: 100%;
 }
-.posters{
+.attach__posters{
     position: relative;
     display: flex;
 }

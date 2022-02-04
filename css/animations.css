@@ -49,7 +49,7 @@
 }
 /* Animation de l'affiche du film: */
 
-/* -Se décale vers la gauche quand on clique sur la flèche droite */
+/* -Se décale vers la gauche lors du clique sur la flèche droite */
 @keyframes attachSlide1{
     from {left: 0;}
     to {left: -352px;}
@@ -68,7 +68,7 @@
     animation-duration: 0.4s;
     animation-iteration-count: 1;
 }
-/* -Se décale vers la gauche quand on clique sur la flèche droite  */
+/* -Se décale vers la droite lors du clique sur la flèche gauche  */
 @keyframes attachSlide3{
     from {left: -352px;}
     to {left: 0;}

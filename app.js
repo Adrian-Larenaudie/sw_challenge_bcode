@@ -1,30 +1,29 @@
-// Variables pour les deux boutons d'interactions
+// Ciblage boutons d'interactions
 const leftArrow = document.getElementById("left-arrow")
 const rightArrow = document.getElementById("right-arrow")
-// Variables pour les éléments changeants d'affichage
+// Ciblage éléments du main
 const logo = document.getElementById("logo")
 const tittle = document.getElementById("tittle")
 const text = document.getElementById("text")
 const attach = document.getElementById("attach")
 const ten = document.getElementById("ten")
 const oneness = document.getElementById("oneness")
-// Partie footer bar
+// Ciblage éléments footer bar
 const spheres = document.getElementsByClassName("sphere")
 const chargingBar = document.getElementsByClassName("charging-bar")
-// Varibale pour l'index courant du tableau de données
+// Index courant du tableau de données
 let index = 0
-//  Varibale pour la valeur en pixel du positionnement de l'image
+//  Valeur en pixel du positionnement de l'image
 let pxValue = 0
-// Objet contenant les données à afficher
+// Objet des données à afficher
 const data = {
     logo: ["Star-Wars-img/Logo/Logo-Film1.png", "Star-Wars-img/Logo/Logo-Film2.png", "Star-Wars-img/Logo/Logo-Film3.png"],
     tittle: ["Un nouvel espoir", "L'empire contre-attaque", "Le retour du jedi"],
     text: ["C'est le premier opus de la saga Star Wars par la date de sortie, mais le quatrième    selon l'ordre chronologique de l'histoire", "La guerre entre le maléfique Empire galactique et son antagoniste, l'Alliance rebelle, bat soin plein.", "Le maléfique Empire galactique construit une nouvelle station spatiale Etoile de la mort pour anéantir définitivement l'Alliance rebelle."],
     ten: ["Star-Wars-img/7.png", "Star-Wars-img/8.png"],
     oneness: ["Star-Wars-img/7.png", "Star-Wars-img/0.png", "Star-Wars-img/3.png"],
-
 }
-// Fonction pour les différents affichages de la footer bar
+// Les transitions de la footer bar
 function footerBar(target, index){
     if(target == rightArrow){
         chargingBar[index-1].classList.add("charged-bar")
@@ -37,7 +36,7 @@ function footerBar(target, index){
         spheres[index].classList.remove("bright-sphere")
     }   
 }
-// Fonction pour effectuer le switch des éléments affichés
+// Fonction pour effectuer le switch des éléments du main et de l'affiche du film
 function switcher(target, index){
     const array = [logo, tittle, text, oneness]
     if(target == rightArrow){
@@ -45,16 +44,26 @@ function switcher(target, index){
         if(index === 1){
             attach.classList.add("slideAttach1")
             ten.classList.add("slideright")
+            leftArrow.src = "Star-Wars-img/brightArrow.svg"
         }
         if(index === 2){
             attach.classList.add("slideAttach2")
+            rightArrow.src = "Star-Wars-img/Arrow.svg"
         }
     } else if(target == leftArrow){
         array.forEach(element => element.classList.add("slideleft"))
-        if(index === 0){attach.classList.add("slideAttach3")}
-        if(index === 1){attach.classList.add("slideAttach4")}
-       /*  if(ten.src.includes("Star-Wars-img/7.png")){ten.classList.add("slideleft")} */
-       if(index != 1){ten.classList.add("slideleft")}
+        if(index === 0){
+            attach.classList.add("slideAttach3")
+            leftArrow.src = "Star-Wars-img/Arrow.svg"
+            rightArrow.src = "Star-Wars-img/brightArrow.svg"
+        } else {
+            leftArrow.src = "Star-Wars-img/brightArrow.svg"
+        }
+        if(index === 1){
+            attach.classList.add("slideAttach4")
+            rightArrow.src = "Star-Wars-img/brightArrow.svg"
+        }
+        if(index != 1){ten.classList.add("slideleft")}
     }
     setTimeout(()=>{
         logo.src = data.logo[index]
@@ -74,7 +83,7 @@ function switcher(target, index){
         attach.style.left = pxValue+"px"
     }, 350)
 }
-// Ajout d'évènements click sur les flèches pour changer l'affichage //
+// Event sur les boutons //
 leftArrow.addEventListener("click", (e)=>{
     if(index > 0){
         index--
@@ -89,4 +98,3 @@ rightArrow.addEventListener("click", ()=>{
         footerBar(rightArrow, index)
     }
 })
-    
