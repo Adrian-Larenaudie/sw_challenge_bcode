@@ -1,29 +1,35 @@
-// Ciblage boutons d'interactions
-const leftArrow = document.getElementById("left-arrow")
-const rightArrow = document.getElementById("right-arrow")
-// Ciblage éléments du main
-const logo = document.getElementById("logo")
-const tittle = document.getElementById("tittle")
-const text = document.getElementById("text")
-const attach = document.getElementById("attach")
-const ten = document.getElementById("ten")
-const oneness = document.getElementById("oneness")
-// Ciblage éléments footer bar
-const spheres = document.getElementsByClassName("sphere")
-const chargingBar = document.getElementsByClassName("charging-bar")
-// Index courant du tableau de données
-let index = 0
-//  Valeur en pixel du positionnement de l'image
-let pxValue = 0
-// Objet des données à afficher
+//storing interaction buttons
+const leftArrow = document.getElementById("left-arrow");
+const rightArrow = document.getElementById("right-arrow");
+
+//storing main elements
+const logo = document.getElementById("logo");
+const tittle = document.getElementById("tittle");
+const text = document.getElementById("text");
+const attach = document.getElementById("attach");
+const ten = document.getElementById("ten");
+const oneness = document.getElementById("oneness");
+
+//storing footer bar elements
+const spheres = document.getElementsByClassName("sphere");
+const chargingBar = document.getElementsByClassName("charging-bar");
+
+//variable statement which will store the current index of an array of data
+let index = 0;
+
+//variable statement which will store the pixel value of the positioning of the image 
+let pxValue = 0;
+
+//object to store data to display dynamically
 const data = {
     logo: ["Star-Wars-img/Logo/Logo-Film1.png", "Star-Wars-img/Logo/Logo-Film2.png", "Star-Wars-img/Logo/Logo-Film3.png"],
     tittle: ["Un nouvel espoir", "L'empire contre-attaque", "Le retour du jedi"],
     text: ["C'est le premier opus de la saga Star Wars par la date de sortie, mais le quatrième    selon l'ordre chronologique de l'histoire", "La guerre entre le maléfique Empire galactique et son antagoniste, l'Alliance rebelle, bat soin plein.", "Le maléfique Empire galactique construit une nouvelle station spatiale Etoile de la mort pour anéantir définitivement l'Alliance rebelle."],
     ten: ["Star-Wars-img/7.png", "Star-Wars-img/8.png"],
     oneness: ["Star-Wars-img/7.png", "Star-Wars-img/0.png", "Star-Wars-img/3.png"],
-}
-// Les transitions de la footer bar
+};
+
+//function that allows to manage footer bar transitions
 function footerBar(target, index){
     if(target == rightArrow){
         chargingBar[index-1].classList.add("charged-bar")
@@ -36,7 +42,8 @@ function footerBar(target, index){
         spheres[index].classList.remove("bright-sphere")
     }   
 }
-// Fonction pour effectuer le switch des éléments du main et de l'affiche du film
+
+//function that allows to switch main elements and movie poster
 function switcher(target, index){
     const array = [logo, tittle, text, oneness]
     if(target == rightArrow){
@@ -83,7 +90,8 @@ function switcher(target, index){
         attach.style.left = pxValue+"px"
     }, 350)
 }
-// Event sur les boutons //
+
+//buttons click events
 leftArrow.addEventListener("click", (e)=>{
     if(index > 0){
         index--
@@ -91,6 +99,7 @@ leftArrow.addEventListener("click", (e)=>{
         footerBar(leftArrow, index)
     }
 })
+
 rightArrow.addEventListener("click", ()=>{
     if(index < 2){
         index++
@@ -98,3 +107,4 @@ rightArrow.addEventListener("click", ()=>{
         footerBar(rightArrow, index)
     }
 })
+

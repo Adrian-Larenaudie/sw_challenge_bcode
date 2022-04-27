@@ -1,7 +1,7 @@
-/* Animation */
+/* Animations */
 
-/* Partie texte titre logo et année de sortie */
-@keyframes slideright{
+/* Descirption text, logo and release date part */
+@keyframes slideright {
     0% {
         left: 0;
     }
@@ -18,12 +18,14 @@
         opacity: 1;
     }
 }
-.slideright{
+
+.slideright {
     position: relative;
     animation-name: slideright;
     animation-duration: 0.4s;
     animation-iteration-count: 1;
 }
+
 @keyframes slideleft {
     0% {
         left: 0;
@@ -41,48 +43,57 @@
         opacity: 1;
     }
 }
-.slideleft{
+
+.slideleft {
     position: relative;
     animation-name: slideleft;
     animation-duration: 0.4s;
     animation-iteration-count: 1;
 }
-/* Animation de l'affiche du film: */
 
-/* -Se décale vers la gauche lors du clique sur la flèche droite */
-@keyframes attachSlide1{
+/* Movie poster animation */
+
+/* -Slide to the left when user click on the right arrow */
+@keyframes attachSlide1 {
     from {left: 0;}
     to {left: -352px;}
 }
-@keyframes attachSlide2{
+
+@keyframes attachSlide2 {
     from {left: -352px;}
     to {left: -704px;}
 }
-.slideAttach1{
+
+.slideAttach1 {
     animation-name: attachSlide1;
     animation-duration: 0.4s;
     animation-iteration-count: 1;
 }
-.slideAttach2{
+
+.slideAttach2 {
     animation-name: attachSlide2;
     animation-duration: 0.4s;
     animation-iteration-count: 1;
 }
-/* -Se décale vers la droite lors du clique sur la flèche gauche  */
-@keyframes attachSlide3{
+
+/* -Slide to the right when user click on the left arrow */
+@keyframes attachSlide3 {
     from {left: -352px;}
     to {left: 0;}
 }
-@keyframes attachSlide4{
+
+@keyframes attachSlide4 {
     from {left: -704px;}
     to {left: -352px;}
 }
-.slideAttach3{
+
+.slideAttach3 {
     animation-name: attachSlide3;
     animation-duration: 0.4s;
     animation-iteration-count: 1;
 }
-.slideAttach4{
+
+.slideAttach4 {
     animation-name: attachSlide4;
     animation-duration: 0.4s;
     animation-iteration-count: 1;
