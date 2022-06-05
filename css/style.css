@@ -4,16 +4,22 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-html {
-    font-size: 10%;
-}
-
 body {
     background-color: #060447;
     color: #FFF38A;
     margin: 0;
     display: flex;
     flex-direction: column;   
+    -moz-user-select: none; /* Firefox */
+    -webkit-user-select: none; /* Chrome, Safari, Opéra depuis la version 15 */
+    -ms-user-select: none; /* Internet explorer depuis la version 10 et Edge */
+    user-select: none; /* Propriété standard */
+}
+
+.main {
+    position: relative;
+    width: 70%;
+    margin: 100px auto;
 }
 
 .main-text__logo {
@@ -40,7 +46,7 @@ body {
 
 /* Style on the three mains blocks */
 .main-text {
-    margin: 50px;
+    width: 100%;
 }
 
 .attach {
@@ -48,13 +54,13 @@ body {
     width: 530px;
     height: 822.59px;
     left: 880px;
-    top: 50px;
+    top: -1rem;
     display: flex;
 }
 
 .movie-switcher {
     display: flex;
-    margin: 10px 150px 0 150px;
+    margin: 50px 150px 0 150px;
     justify-content: flex-start;
 }
 
