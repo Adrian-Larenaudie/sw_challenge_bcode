@@ -4,7 +4,7 @@ const rightArrow = document.getElementById("right-arrow");
 
 //storing main elements
 const logo = document.getElementById("logo");
-const tittle = document.getElementById("tittle");
+const title = document.getElementById("title");
 const text = document.getElementById("text");
 const attach = document.getElementById("attach");
 const ten = document.getElementById("ten");
@@ -23,7 +23,7 @@ let pxValue = 0;
 //object to store data to display dynamically
 const data = {
     logo: ["Star-Wars-img/Logo/Logo-Film1.png", "Star-Wars-img/Logo/Logo-Film2.png", "Star-Wars-img/Logo/Logo-Film3.png"],
-    tittle: ["Un nouvel espoir", "L'empire contre-attaque", "Le retour du jedi"],
+    title: ["Un nouvel espoir", "L'empire contre-attaque", "Le retour du jedi"],
     text: ["C'est le premier opus de la saga Star Wars par la date de sortie, mais le quatrième    selon l'ordre chronologique de l'histoire", "La guerre entre le maléfique Empire galactique et son antagoniste, l'Alliance rebelle, bat soin plein.", "Le maléfique Empire galactique construit une nouvelle station spatiale Etoile de la mort pour anéantir définitivement l'Alliance rebelle."],
     ten: ["Star-Wars-img/7.png", "Star-Wars-img/8.png"],
     oneness: ["Star-Wars-img/7.png", "Star-Wars-img/0.png", "Star-Wars-img/3.png"],
@@ -45,7 +45,7 @@ function footerBar(target, index){
 
 //function that allows to switch main elements and movie poster
 function switcher(target, index){
-    const array = [logo, tittle, text, oneness]
+    const array = [logo, title, text, oneness]
     if(target == rightArrow){
         array.forEach(element => element.classList.add("slideright"))
         if(index === 1){
@@ -74,7 +74,7 @@ function switcher(target, index){
     }
     setTimeout(()=>{
         logo.src = data.logo[index]
-        tittle.textContent = data.tittle[index]
+        title.textContent = data.title[index]
         text.textContent = data.text[index]
         oneness.src = data.oneness[index]
         if(target == rightArrow && (index == 2 || index == 1)){ten.src = data.ten[1]}
